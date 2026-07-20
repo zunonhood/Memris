@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>404 Error</title>
+  </head>
+  <style>
+    body {
+      background: black;
+      color: white;
+      max-width: max-content;
+      margin: auto;
+      text-align: center;
+			padding-top: 10%;
+    }
+	img {
+		image-rendering: pixelated;
+	}
+  </style>
+  <body><img src="https://i.imgur.com/q9f2z1X.gif"><br><br>
+    somehow, you got lost in the depths of space. go back.
+  </body>
+</html>

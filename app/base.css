@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'w95fa';
+  src: url(PixelOperator.ttf) format("truetype");
+} 
+
+@font-face {
+  font-family: 'utonium';
+  src: url(OldEnglishGothicPixelRegular-ow2Bo.ttf);
+}
+
+@font-face {
+  font-family: '04B_30';
+  src: url(PixelOperator.ttf);
+}
+
+@font-face {
+  font-family: 'pixel-bubble';
+  src: url(pixelbubble.TTF);
+}
+
+:root {
+  text-transform: lowercase;
+  letter-spacing: -0.5px;
+}
+
+html {
+  cursor: url(images/cursor.png), auto !important;
+}
+
+button:hover {
+  cursor: url(images/cursorhover.png), auto !important;
+}
+
+a:hover {
+  cursor: url(images/cursorhover.png), auto !important;
+}
+
+body-alternative-pink {
+  --background: url("ext/106a1f84_0056c86c2606ff1b933b07cd63f0.jpg");
+  --contrastbg: #fffbf9;
+  --lightest: #f6d9d9;
+  --light: #D6B2B2;
+  --shadow: #c48c8c;
+  --dark: #845555;
+  --darkest: #26120b;
+}
+
+body {
+  --background: #000000;
+  --contrastbg: #EAE1CC;
+  --lightest: #EAE1CC;
+  --light: #acbcae;
+  --mid: #78a185;
+  --shadow: #768677;
+  --dark: #4a564a;
+  --darkest: #191f19;
+}
+
+
+::selection {
+  background-color: var(--shadow);
+  color: var(--contrastbg);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+  background-image: url('ext/7ecce4ea_firO49n.png');
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--light);
+  border: 2px solid var(--dark);
+  border-top: 2px solid var(--lighter);
+  border-left: 2px solid var(--lighter);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--shadow);
+  box-shadow: none;
+  background-image: none;
+  border: 2px solid var(--light);
+  border-top: 2px solid var(--dark);
+  border-left: 2px solid var(--dark);
+}
+
+::-webkit-scrollbar-button {
+  background-image: url('ext/aabf839f_yzJJ1bz.png');
+  height: 15px;
+  width: 15px;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+  background-position: -45px 0px;
+}
+
+::-webkit-scrollbar-button:vertical:end {
+  background-position: 0px 0px;
+}
+
+.subtitle {
+  font-family: '04B_30';
+  font-weight: bolder;
+  border: 1px solid #c0cdb2;
+  border-left: 1px solid var(--dark);
+  border-top: 1px solid var(--dark);
+  padding: 2px;
+  background-color: var(--light);
+}
+
+.subtitle {
+  color: var(--lightest);
+  text-shadow:-1px -1px 0 var(--darkest),1px -1px 0 var(--darkest),-1px 1px 0 var(--darkest),1px 1px 0 var(--darkest); 
+  text-decoration: underline;
+  background-color: var(--shadow);
+}

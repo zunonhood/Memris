@@ -1,0 +1,179 @@
+/* start light mode styling */
+	:root {
+		--text: #00a04a;
+		--border: #00a04a;
+		--accent: #00a04a;
+		--bg: #000000;
+		--gradientTop: #000000;
+		--gradientBottom: #000000;
+	}
+	header {
+		background: url('***light mode banner image***');
+	}
+/* end light mode styling */
+
+img {
+  image-rendering: pixelated;
+}
+
+* { 
+	box-sizing: border-box;
+}
+body {
+	padding: 10px;
+	font-family: 'MS PGothic', sans-serif;
+	color: var(--text);
+
+	/* page background pattern */
+	background-color: var(--gradientBottom);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.container {
+	max-width: 55rem;
+	margin: 5vw auto 12px auto;
+	border: 6px solid var(--border);
+	outline: 3px solid var(--gradientTop);
+	outline-offset: 4px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5px;
+	gap: 5px;
+
+	/* container background pattern */
+	background-color: var(--gradientBottom);
+	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, var(--gradientBottom) 9px ), repeating-linear-gradient( var(--bg), var(--bg));
+}
+/* these control the column widths */
+.small { flex: 1 1 9%; }
+.large { flex: 1 1 82%; }
+.full { flex: 1 1 100%; }
+.half { flex: 1 1 49%; }
+
+.logoclip {
+position: absolute;
+object-position: 0 -7px ;
+
+  clip: rect(0, 567px, 120px, 0);
+  }
+/* for clipping in the logo */
+
+header {
+	background-size: fill;
+	background-image: url("images/anim8tedbanner.gif"); image-rendering: pixelated;
+	background-position: center;
+	width: 100%;
+	height: 120px; /* change banner height here*/
+	border: 2px solid var(--border);
+	position: relative;
+}
+header span {
+	font-size: 2.5rem;
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+	margin: 10px;
+	font-weight: bold;
+	text-shadow: 1px 1px var(--text),
+		-1px 1px var(--text),
+		1px -1px var(--accent),
+		-1px -1px var(--accent);
+	color: var(--gradientTop);
+}
+
+
+nav {
+	border: 2px solid var(--border);
+	padding: 5px;
+	background: linear-gradient(var(--gradientTop),var(--gradientBottom));
+}
+nav div {
+	text-align: center;
+	font-size: 1.25rem;
+	margin: 5px 5px 10px 5px;
+}
+nav a {
+	display: block;
+	margin: 5px;
+	background: linear-gradient(to right,var(--bg),var(--gradientBottom));
+	padding: 2px 7px;
+	text-decoration: none;
+}
+nav a:link, nav a:visited { 
+	color: var(--text);
+}
+nav a:hover, nav a:focus {
+	background: linear-gradient(to right,var(--bg), var(--gradientBottom), var(--gradientTop));
+}
+
+/* optional button styling like in the preview */
+div.small > img {
+	display: block;
+	margin: 5px auto;
+	border:2px solid var(--border);
+}
+
+
+section {
+	border: 2px solid var(--border);
+	background: linear-gradient(var(--gradientTop),var(--gradientBottom));
+	padding: 5px;
+}
+
+
+footer {
+	text-align: center;
+	margin-bottom: 5vw;
+	font-size: 0.8rem;
+}
+footer a { 
+	text-decoration: none;
+}
+
+
+h1, h2, h3, h4, h5, h6, p  { 
+	margin: 5px;
+	line-height: 1.2;
+}
+h1 { 
+	font-size: 1.4rem;
+	letter-spacing: 2px;
+	font-weight: normal;
+	text-align: center;
+	border-bottom: 2px solid var(--border);
+	padding-bottom: 5px;
+}
+h2 { 
+	font-size: 1.25rem;
+	font-weight: normal;
+	text-align: center;
+}
+h3 { 
+	font-size: 1.1rem;
+}
+h4 { 
+	font-size: 1rem;
+	color: var(--accent);
+	padding-left: 12px;
+}
+
+/* prevents overflow on smaller screens */
+img { max-width: 100%; }
+pre { overflow-x: auto; }
+
+
+a:hover, a:focus {
+	font-style: italic;
+}
+a:link, a:visited {
+	color: var(--accent);
+}
+
+/* remove the name/logo text overlaid on the banner */
+.logoclip { display: none; }
