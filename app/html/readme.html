@@ -20,12 +20,17 @@
   <div id="md">loading readme…</div>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-    var RAW = "https://raw.githubusercontent.com/Gonorolabs/Gonoro/main/README.md";
-    fetch(RAW, { cache: "no-store" })
+    var RAWBASE = "https://raw.githubusercontent.com/Gonorolabs/Gonoro/main/";
+    fetch(RAWBASE + "README.md", { cache: "no-store" })
       .then(function (r) { return r.text(); })
       .then(function (md) {
         md = md.replace(/```mermaid[\s\S]*?```/g, "");   // skip the mermaid diagram (no renderer here)
-        document.getElementById("md").innerHTML = marked.parse(md);
+        var html = marked.parse(md);
+        // relative image srcs -> repo raw content (fixes the logo + any local images)
+        html = html.replace(/(<img[^>]+src=")(?!https?:|\/\/|data:)/g, "$1" + RAWBASE);
+        // relative links -> the repo on github
+        html = html.replace(/(<a[^>]+href=")(?!https?:|#|mailto:|\/\/)/g, "$1https://github.com/Gonorolabs/Gonoro/blob/main/");
+        document.getElementById("md").innerHTML = html;
       })
       .catch(function (e) {
         document.getElementById("md").textContent = "could not load readme (need internet): " + e;
