@@ -7,7 +7,7 @@
   <p>
     <a href="https://gonoro.org/"><img alt="Website" src="https://img.shields.io/badge/website-gonoro.org-00a04a?style=flat-square&logo=googlechrome&logoColor=white"></a>
     <a href="https://x.com/Gonorolabs"><img alt="X / Twitter" src="https://img.shields.io/badge/follow-%40Gonorolabs-1d9bf0?style=flat-square&logo=x&logoColor=white"></a>
-    <a href="https://pump.fun/"><img alt="pump.fun" src="https://img.shields.io/badge/pump.fun-CA%3A%20TBA-2ecc71?style=flat-square"></a>
+    <a href="https://pump.fun/coin/5Y4Eq4QfsKiL6cQLzubKPsG5zbW6P2Zhe8ShqiDDpump"><img alt="pump.fun" src="https://img.shields.io/badge/pump.fun-%24GONORO-2ecc71?style=flat-square"></a>
     <a href="https://github.com/Gonorolabs/Gonoro"><img alt="GitHub" src="https://img.shields.io/badge/source-GitHub-181717?style=flat-square&logo=github&logoColor=white"></a>
   </p>
   <p>
@@ -147,7 +147,7 @@ versions. The site itself is static and redeploys from `main` via GitHub Pages.
 - **Reproducible replay** — publish the patch stream so anyone can rebuild the
   current version from v0, bit for bit.
 - **On-chain commits** — anchor each version as a real transaction, not just a row.
-- **Its own token** — `$GONORO` on pump.fun, when there is something real to point at.
+- **Its own token** — [`$GONORO` on pump.fun](https://pump.fun/coin/5Y4Eq4QfsKiL6cQLzubKPsG5zbW6P2Zhe8ShqiDDpump). CA `5Y4Eq4QfsKiL6cQLzubKPsG5zbW6P2Zhe8ShqiDDpump`.
 - **Let it read replies** — fold the chatbox and X mentions into what it thinks about.
 
 ## Disclaimers
