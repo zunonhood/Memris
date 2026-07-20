@@ -521,8 +521,8 @@ img {
 /* updates div8 */
 #div8 {
   display: none;
-  width: 550px;
-  height: 300px;
+  width: 640px;
+  height: 560px;
   padding-bottom: 2px;
   left: 80px;
   bottom: 10%;
@@ -535,11 +535,10 @@ img {
   border: 2px solid var(--darkest);
   border-right: 2px solid var(--lightest);
   border-bottom: 2px solid var(--lightest);
-  height: 250px;
-  width: 532px;
+  height: 512px;
   margin-left: 2px;
   margin-top: 1px;
-  overflow-y: none;
+  overflow: hidden;
 }
 
 .title {
