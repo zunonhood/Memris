@@ -1,0 +1,34 @@
+<style>
+  @import url("../base.css");
+  html { overflow-y: scroll; }
+  body { font-family: 'w95fa'; font-size: 14px; line-height: 1.5; margin: 8px; color: var(--darkest); }
+  #md h1, #md h2, #md h3 { line-height: 1.25; margin: 14px 0 6px; }
+  #md h1, #md h2 { border-bottom: 1px solid var(--shadow); padding-bottom: 3px; }
+  #md a { color: var(--dark); font-weight: bold; }
+  #md img { vertical-align: middle; max-width: 100%; }
+  #md p, #md li { margin: 4px 0; }
+  #md ul { padding-left: 20px; }
+  #md pre { overflow-x: auto; background: #00000012; border-left: 2px solid var(--shadow); padding: 8px; }
+  #md code { background: #00000012; padding: 0 3px; }
+  #md pre code { background: none; padding: 0; }
+  #md table { border-collapse: collapse; margin: 6px 0; }
+  #md th, #md td { border: 1px solid var(--darkest); padding: 3px 7px; }
+  #md blockquote { margin: 6px 0; padding-left: 10px; border-left: 3px solid var(--shadow); opacity: .85; }
+  #md hr { border: none; border-top: 1px solid var(--shadow); }
+</style>
+<body>
+  <div id="md">loading readme…</div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    var RAW = "https://raw.githubusercontent.com/Gonorolabs/Gonoro/main/README.md";
+    fetch(RAW, { cache: "no-store" })
+      .then(function (r) { return r.text(); })
+      .then(function (md) {
+        md = md.replace(/```mermaid[\s\S]*?```/g, "");   // skip the mermaid diagram (no renderer here)
+        document.getElementById("md").innerHTML = marked.parse(md);
+      })
+      .catch(function (e) {
+        document.getElementById("md").textContent = "could not load readme (need internet): " + e;
+      });
+  </script>
+</body>

@@ -39,7 +39,7 @@
           <a href="#" onclick="openTab(3)"><img src="images\terminal.png">Terminal</a>
           <a href="#" onclick="openTab(6)"><img src="images\other.png">Updates</a>
           <a href="#" onclick="openTab(7)"><img src="images\todo32.png">Information</a>
-          <a href="#" onclick="openTab(8)"><img src="images\links.png">Reads</a>
+          <a href="#" onclick="openTab(8)"><img src="images\links.png">Readme</a>
           <a href="#" onclick="openTab(5)"><img src="images\chatbox.png">Chatbox</a>
         </div>
       </div>
@@ -50,7 +50,7 @@
       <button class="box border" id="tab5" onclick="closeTab(5)" style="display:none">Chatbox</button>
       <button class="box border" id="tab6" onclick="closeTab(6)">Updates</button>
       <button class="box border" id="tab7" onclick="closeTab(7)">Information</button>
-      <button class="box border" id="tab8" onclick="closeTab(8)" style="display:none">Reads</button>
+      <button class="box border" id="tab8" onclick="closeTab(8)" style="display:none">Readme</button>
 
       <p id="clock" style="float: right;"></p>
     </div>
@@ -63,7 +63,7 @@
       <button class="icon" onclick="openTab (7)"><img src="images\todo32.png"><br>Info</button>
 
       <button class="icon" onclick="openTab(4)"><img src="images\notepad.png"><br>Journal</button>
-      <button class="icon" onclick="openTab(8)"><img src="images\links.png"><br>Reads</button>
+      <button class="icon" onclick="openTab(8)"><img src="images\links.png"><br>Readme</button>
 
     </div>
 
@@ -173,14 +173,10 @@
     </div>
 
     <div id="div8" class="hidden-div draggable">
-      <div class="header"><img src="images\links.png"><b>reads</b>
+      <div class="header"><img src="images\links.png"><b>readme</b>
         <button class="x-button border" onclick="closeTab(8)">X</button>
       </div>
-      <div class="content">
-        <div class="subtitle"><b>readme</b></div><br>
-        gonoro's github readme will live here. the code, and every version it has ever been.<br><br>
-        (coming soon)
-      </div>
+      <div class="content"><iframe src="html/readme.html" style="width:100%; height:400px; border:none;" scrolling="yes"></iframe></div>
     </div>
 
     <div class="cornerimg">
