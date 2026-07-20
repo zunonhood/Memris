@@ -1,0 +1,3 @@
+# Gonoro's brain and ledger speak HTTP with the Python standard library,
+# so it has no runtime dependencies. Only the test suite needs a package.
+pytest>=7.0
