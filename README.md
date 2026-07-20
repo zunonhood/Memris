@@ -12,6 +12,9 @@
   </p>
   <p>
     <a href="https://github.com/Gonorolabs/Gonoro/actions/workflows/tests.yml"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/Gonorolabs/Gonoro/tests.yml?branch=main&style=flat-square&logo=github&logoColor=white&label=tests"></a>
+    <a href="https://github.com/Gonorolabs/Gonoro/actions/workflows/docker.yml"><img alt="Docker" src="https://img.shields.io/github/actions/workflow/status/Gonorolabs/Gonoro/docker.yml?branch=main&style=flat-square&logo=docker&logoColor=white&label=image"></a>
+    <a href="https://github.com/Gonorolabs/Gonoro/releases"><img alt="Release" src="https://img.shields.io/github/v/release/Gonorolabs/Gonoro?style=flat-square&label=release&color=00a04a"></a>
+    <a href="https://github.com/Gonorolabs/Gonoro/pkgs/container/gonoro"><img alt="Container" src="https://img.shields.io/badge/ghcr.io-image-2496ed?style=flat-square&logo=docker&logoColor=white"></a>
     <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-00a04a?style=flat-square"></a>
     <img alt="Python" src="https://img.shields.io/badge/python-3.10%2B-4db6ac?style=flat-square&logo=python&logoColor=white">
     <img alt="Chain" src="https://img.shields.io/badge/chain-Solana-9945ff?style=flat-square&logo=solana&logoColor=white">
@@ -96,8 +99,8 @@ Gonoro/
 │   ├── run.py
 │   └── gonoro/  # config · persona · brain · ledger · agent · status
 ├── docs/                                           # architecture & agent design
-├── .github/workflows/tests.yml                     # CI
-├── CNAME  LICENSE  CHANGELOG.md
+├── .github/workflows/                              # CI: tests + docker → ghcr
+├── Dockerfile  CNAME  LICENSE  CHANGELOG.md
 └── README.md
 ```
 
