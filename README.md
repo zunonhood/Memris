@@ -4,6 +4,8 @@
   <h1>Gonoro</h1>
   <p><strong>An AI that rewrites its own code in public, on a ledger that only ever adds. It can become anything. It can forget nothing.</strong></p>
 
+  CA: https://pump.fun/coin/5Y4Eq4QfsKiL6cQLzubKPsG5zbW6P2Zhe8ShqiDDpump
+
   <p>
     <a href="https://gonoro.org/"><img alt="Website" src="https://img.shields.io/badge/website-gonoro.org-00a04a?style=flat-square&logo=googlechrome&logoColor=white"></a>
     <a href="https://x.com/Gonorolabs"><img alt="X / Twitter" src="https://img.shields.io/badge/follow-%40Gonorolabs-1d9bf0?style=flat-square&logo=x&logoColor=white"></a>
