@@ -1,39 +1,23 @@
 <style>
   @import url("../base.css");
-  html { overflow-y: scroll; }
-  body { font-family: 'w95fa'; font-size: 14px; line-height: 1.5; margin: 8px; color: var(--darkest); }
-  #md h1, #md h2, #md h3 { line-height: 1.25; margin: 14px 0 6px; }
-  #md h1, #md h2 { border-bottom: 1px solid var(--shadow); padding-bottom: 3px; }
-  #md a { color: var(--dark); font-weight: bold; }
-  #md img { vertical-align: middle; max-width: 100%; }
-  #md p, #md li { margin: 4px 0; }
-  #md ul { padding-left: 20px; }
-  #md pre { overflow-x: auto; background: #00000012; border-left: 2px solid var(--shadow); padding: 8px; }
-  #md code { background: #00000012; padding: 0 3px; }
-  #md pre code { background: none; padding: 0; }
-  #md table { border-collapse: collapse; margin: 6px 0; }
-  #md th, #md td { border: 1px solid var(--darkest); padding: 3px 7px; }
-  #md blockquote { margin: 6px 0; padding-left: 10px; border-left: 3px solid var(--shadow); opacity: .85; }
-  #md hr { border: none; border-top: 1px solid var(--shadow); }
+  html { overflow-y:scroll; }
+  body { font-family:'w95fa'; font-size:14px; line-height:1.5; margin:9px; color:var(--darkest); }
+  h1,h2 { line-height:1.25; border-bottom:1px solid var(--shadow); padding-bottom:3px; }
+  code { background:#00000012; padding:0 3px; }
+  .rule { padding:7px; margin:7px 0; border-left:3px solid var(--shadow); background:#ffffff50; }
+  a { color:var(--dark); font-weight:bold; }
 </style>
 <body>
-  <div id="md">loading readme…</div>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    var RAWBASE = "https://raw.githubusercontent.com/Gonorolabs/Gonoro/main/";
-    fetch(RAWBASE + "README.md", { cache: "no-store" })
-      .then(function (r) { return r.text(); })
-      .then(function (md) {
-        md = md.replace(/```mermaid[\s\S]*?```/g, "");   // skip the mermaid diagram (no renderer here)
-        var html = marked.parse(md);
-        // relative image srcs -> repo raw content (fixes the logo + any local images)
-        html = html.replace(/(<img[^>]+src=")(?!https?:|\/\/|data:)/g, "$1" + RAWBASE);
-        // relative links -> the repo on github
-        html = html.replace(/(<a[^>]+href=")(?!https?:|#|mailto:|\/\/)/g, "$1https://github.com/Gonorolabs/Gonoro/blob/main/");
-        document.getElementById("md").innerHTML = html;
-      })
-      .catch(function (e) {
-        document.getElementById("md").textContent = "could not load readme (need internet): " + e;
-      });
-  </script>
+  <h1>Memris Protocol</h1>
+  <p><b>The market remembers the price. Memris remembers who moved first.</b></p>
+  <p>Memris is a market-memory agent built for Robinhood Chain and represented by a small cat living inside this desktop.</p>
+  <h2>Memory rules</h2>
+  <div class="rule"><b>01 / FINITE</b><br>Only thirty-two memories may remain active at once.</div>
+  <div class="rule"><b>02 / WITNESSED</b><br>Every memory is timestamped before its outcome is known.</div>
+  <div class="rule"><b>03 / MORTAL</b><br>At midnight the current Memris ends. Four memories survive into the next life.</div>
+  <div class="rule"><b>04 / HONEST</b><br>A wrong call becomes a scar. It is never polished into a prediction she did not make.</div>
+  <h2>Launch</h2>
+  <p>Network: <code>Robinhood Chain</code><br>Launchpad: <a href="https://www.ponsfamily.com/launchpad" target="_blank">Pons</a><br>Contract: <code>coming soon</code></p>
+  <h2>Status</h2>
+  <p>Interface awake. Memory engine initializing. No token is live until the verified contract address appears here.</p>
 </body>

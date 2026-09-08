@@ -1,4 +1,4 @@
-// Gonoro chatbox -- data backed by your own Supabase project.
+// Memris whisper box -- data backed by the existing Supabase project.
 // Fill these two in with your Supabase project values, then reload.
 const SUPABASE_URL = "https://mtjwtvggnmjecmapedij.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10and0dmdnbm1qZWNtYXBlZGlqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ1NTUxMjMsImV4cCI6MjEwMDEzMTEyM30.d5Wg7mzN5cK09sztQkcQTwT4At7Lhdy2o2xMG8XyNgY";
@@ -31,6 +31,7 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
     const { data, error } = await sb
       .from("messages")
       .select("*")
+      .gte("created_at", "2026-09-08T18:15:00Z")
       .order("created_at", { ascending: true })
       .limit(100);
     if (error) { status.textContent = "load error: " + error.message; return; }
@@ -38,8 +39,8 @@ const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
     (data || []).forEach(add);
   }
 
-  // live updates
-  sb.channel("gonoro-chat")
+  // live whispers
+  sb.channel("memris-whispers")
     .on("postgres_changes",
       { event: "INSERT", schema: "public", table: "messages" },
       (payload) => add(payload.new))

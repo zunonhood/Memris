@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Gonoro</title>
+	<title>Memris</title>
 	<link href="style.css" rel="stylesheet" type="text/css" media="all">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<link rel="icon" type="image/png" href="images/Gonoro.png">
+	<link rel="icon" type="image/png" href="images/Memris.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
@@ -46,6 +46,32 @@
 .social:hover, .social:focus { background: var(--accent); color: #000; font-style: normal; }
 .social svg { width: 12px; height: 12px; fill: currentColor; display: block; flex: none; }
 .enter { letter-spacing: 2px; }
+.project-logo {
+	align-self: center;
+	display: block;
+	width: 132px;
+	height: 132px;
+	margin: 20px 0 12px;
+	object-fit: contain;
+}
+.ca-box {
+	width: 132px;
+	min-height: 28px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 7px;
+	background: #000;
+	color: var(--accent);
+	border: 2px solid var(--border);
+	border-radius: 6px;
+	font-family: 'Silkscreen', 'MS PGothic', monospace;
+	font-size: 7px;
+	line-height: 1.3;
+	text-align: center;
+	word-break: break-all;
+}
 </style>
 </head>
 
@@ -56,16 +82,16 @@
 		<header></header>
 
 		<section style="flex: 1 1 72%">
-			<h1><strong>GONORO</strong></h1>
-			<h2>It can rewrite itself, but it can't forget itself.</h2>
+			<h1><strong>MEMRIS</strong></h1>
+			<h2>The market remembers the price. Memris remembers who moved first.</h2>
 			<div class="excerpt">
-You can keep scrolling down.
+Every trade leaves a number behind. The reason for it disappears.
 <br><br>
-At the very top is what it looks like now. Sharp, restrained, almost likeable. This is the self it wrote this morning, its latest version. You're standing on its head.
+Memris watches Robinhood Chain for the brief moment before a position becomes a crowd. She turns that moment into a memory: the wallet, the asset, the time, and what she believed it meant. Nothing is rewritten after the chart makes the answer obvious.
 <br><br>
-One layer down is yesterday. A little worse, and you can see where. A judgment it hasn't smoothed over yet, a sentence that tries too hard. Down again, clumsier. <span class="fade">Every layer down, it gets younger, and dumber…</span>
+She can hold only thirty-two memories at once. At midnight, four survive. The rest close forever. <span class="fade">You are not here to see what she remembers. You are here before she forgets.</span>
 			</div>
-			<a class="btn readmore" href="gonoro.html">GO DEEPER</a>
+			<a class="btn readmore" href="memris.html">OPEN THE MEMORY</a>
 		</section>
 
 		<section class="enterbox" style="flex: 1 1 24%">
@@ -74,12 +100,11 @@ One layer down is yesterday. A little worse, and you can see where. A judgment i
 				<symbol id="ic-gh" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
 				<symbol id="ic-pill" viewBox="0 0 24 24"><clipPath id="pillclip"><rect x="3" y="9" width="18" height="6" rx="3"/></clipPath><g transform="rotate(-45 12 12)"><rect x="3" y="9" width="9" height="6" clip-path="url(#pillclip)" style="fill:currentColor"/><rect x="3" y="9" width="18" height="6" rx="3" style="fill:none;stroke:currentColor;stroke-width:2"/><line x1="12" y1="9" x2="12" y2="15" style="stroke:currentColor;stroke-width:2"/></g></symbol>
 			</svg>
-			<img class="snakegif" src="images/Snake88.gif" alt="">
+			<img class="project-logo" src="images/Memris.png" alt="Memris logo">
 			<div class="socials">
-				<a class="social" href="https://x.com/Gonorolabs" target="_blank" rel="noopener"><svg><use href="#ic-x"/></svg><span>X</span><svg><use href="#ic-x"/></svg></a>
-				<a class="social" href="https://github.com/Gonorolabs/Gonoro" target="_blank" rel="noopener"><svg><use href="#ic-gh"/></svg><span>GitHub</span><svg><use href="#ic-gh"/></svg></a>
-				<a class="social" href="https://pump.fun/coin/5Y4Eq4QfsKiL6cQLzubKPsG5zbW6P2Zhe8ShqiDDpump" target="_blank" rel="noopener"><svg><use href="#ic-pill"/></svg><span>pump.fun</span><svg><use href="#ic-pill"/></svg></a>
-					<div class="social" style="cursor:default"><span style="user-select:all;word-break:break-all">CA: 5Y4Eq4QfsKiL6cQLzubKPsG5zbW6P2Zhe8ShqiDDpump</span></div>
+				<a class="social" href="https://x.com/memrismachine" target="_blank" rel="noopener"><svg><use href="#ic-x"/></svg><span>X</span><svg><use href="#ic-x"/></svg></a>
+				<a class="social" href="app/html/core.html" onclick="window.open(this.href,'memris-core','width=720,height=620,resizable=yes,scrollbars=yes'); return false;"><svg><use href="#ic-gh"/></svg><span>GitHub</span><svg><use href="#ic-gh"/></svg></a>
+				<div class="ca-box"><span>CA: COMING SOON</span></div>
 			</div>
 			<a class="btn enter" href="app/">ENTER</a>
 		</section>
@@ -87,7 +112,7 @@ One layer down is yesterday. A little worse, and you can see where. A judgment i
 	</div>
 
 	<footer>
-		<span>© 2026 Gonoro. All rights reserved.</span>
+		<span>&copy; 2026 Memris. All rights reserved.</span>
 	</footer>
 
 </body>
